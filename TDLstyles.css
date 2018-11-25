@@ -25,3 +25,7 @@ h1 {
     cursor: pointer;
 }
 
+#myList:focus {
+    outline: none;
+}
+
