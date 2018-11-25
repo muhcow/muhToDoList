@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+    font-family: "Bookman Old Style";
+    font-size: 35px; font-style: normal; 
+    font-variant: normal; font-weight: 700; 
+    line-height: 26.4px; 
+    }
+
+#mainForm{
+    text-align: center;
+}    
+
+.listStyle{
+    text-align: center;
+    font-family: "Bookman Old Style";
+    font-size: 25px; font-style: normal; 
+    font-variant: normal; font-weight: 300; 
+    line-height: 26.4px; 
+    list-style-type:none;
+    margin: 20px 0;
+}
