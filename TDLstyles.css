@@ -19,3 +19,8 @@ h1 {
     list-style-type:none;
     margin: 20px 0;
 }
+
+#myList :hover{
+    text-decoration: line-through;
+}
+
