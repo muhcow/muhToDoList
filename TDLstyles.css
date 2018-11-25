@@ -22,5 +22,6 @@ h1 {
 
 #myList :hover{
     text-decoration: line-through;
+    cursor: pointer;
 }
 
