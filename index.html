@@ -17,14 +17,16 @@ TO DO LIST by Chris Muh
 </head>
 
     <body>
-        <h1> Watch List! </h1>   
+        <h1> Watch list </h1>   
         
         <div id="mainForm">
         <form id="myForm">
-                <input id="newInput" type="text" name="item">
-                <button id="addButton" type=button onclick="addItem(item)"> Add item </button>
-                <button id="clearButton" type=button onclick="clearList()"> Clear list </button>
-                <button id="clearButton" type=button onclick="addSearch(item)"> Search </button>
+                <input  id="newInput" type="text" name="item" placeholder="Search..">
+                <div id="buttons">
+                    <button id="addButton" type=button onclick="addItem(item)"> Add item </button>
+                    <button id="clearButton" type=button onclick="clearList()"> Clear list </button>
+                    <button id="searchButton" type=button onclick="addSearch(item)"> Search </button>
+                </div>
         </form>
         </div>
 
