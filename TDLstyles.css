@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-    font-family: "Bookman Old Style";
+    font-family: "Comic Sans MS";
     font-size: 35px; font-style: normal; 
     font-variant: normal; font-weight: 700; 
     line-height: 26.4px; 
@@ -11,8 +11,7 @@ h1 {
 }    
 
 .listStyle{
-    text-align: center;
-    font-family: "Bookman Old Style";
+    font-family: "Comic Sans MS";
     font-size: 25px; font-style: normal; 
     font-variant: normal; font-weight: 300; 
     line-height: 26.4px; 
@@ -20,9 +19,23 @@ h1 {
     margin: 20px 0;
 }
 
+#mySearch {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    list-style-type:none;
+}
+
+#myList {
+    position: absolute;
+    left: 700px;
+    top: 100px;
+}
+
 #myList :hover{
     text-decoration: line-through;
     cursor: pointer;
+    
 }
 
 #myList:focus {
