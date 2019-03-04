@@ -64,28 +64,49 @@ function searchItem(newItem){
         var animeID = topAnime.mal_id;
         var animeImageURL = topAnime.image_url;
         var animeTitle = topAnime.title;
+        var episodes = topAnime.episodes;
+
+        console.log(episodes);    
 
         //build list element
-        var listNode = document.createElement("LI");
-        var textNode = document.createTextNode(animeTitle);
-        listNode.appendChild(textNode);
-        listNode.classList.add("listStyle");
+        var listNode = document.createElement("UL");
+
+        
+        //add like icon
+        var imageNode = document.createElement("img");
+        imageNode.setAttribute("src",'like.png'); 
+        imageNode.setAttribute("id", "heartIcon");
+        imageNode.classList.add("iconStyle");
+        listNode.appendChild(imageNode); 
 
         //add anime image
         var imageNode = document.createElement("img");
         imageNode.setAttribute("src",animeImageURL); 
         imageNode.classList.add("imgStyle");
         listNode.appendChild(imageNode);
+        
 
+        //add anime title
+        var animeList = document.createElement("UL");
+        var titleNode = document.createTextNode(animeTitle);
+        animeList.appendChild(titleNode);
+        //animeList.appendChild(document.createElement("br"));
+        var episodeNode = document.createTextNode("Episodes: " + episodes);
+        animeList.appendChild(episodeNode);
+        animeList.classList.add("listStyle"); 
+        listNode.appendChild(animeList);   
+        //listNode.classList.add("listStyle"); 
+            
         //add click to delete and add to main list event listener
         listNode.addEventListener("click", function deleteItem(event){ 
             var list = document.getElementById("mySearch");
-            var title = document.createTextNode(list.firstElementChild.firstChild.nodeValue);
+            var title = document.createTextNode(list.lastElementChild.lastChild.nodeValue);
             addItem(title);
             list.removeChild(list.firstElementChild);
         });
         
         //add element to search list and reset form field
+        listNode.classList.add("myLike");
         document.getElementById("mySearch").appendChild(listNode);     
         document.getElementById("myForm").reset(); 
 }
