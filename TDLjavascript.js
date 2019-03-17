@@ -74,8 +74,8 @@ function searchItem(newItem){
         
         //add like icon
         var imageNode = document.createElement("img");
-        imageNode.setAttribute("src",'like.png'); 
-        imageNode.setAttribute("id", "heartIcon");
+        imageNode.setAttribute("src",'heart-shape-outline.png'); 
+        //imageNode.setAttribute("id", "heartIcon");
         imageNode.classList.add("iconStyle");
         listNode.appendChild(imageNode); 
 
@@ -90,10 +90,11 @@ function searchItem(newItem){
         var animeList = document.createElement("UL");
         var titleNode = document.createTextNode(animeTitle);
         animeList.appendChild(titleNode);
-        //animeList.appendChild(document.createElement("br"));
+        animeList.appendChild(document.createElement("br"));
         var episodeNode = document.createTextNode("Episodes: " + episodes);
-        animeList.appendChild(episodeNode);
         animeList.classList.add("listStyle"); 
+        animeList.setAttribute("id",'myAnimeStats');
+        animeList.appendChild(episodeNode);
         listNode.appendChild(animeList);   
         //listNode.classList.add("listStyle"); 
             
@@ -107,6 +108,7 @@ function searchItem(newItem){
         
         //add element to search list and reset form field
         listNode.classList.add("myLike");
+        listNode.classList.add("mySearchList");
         document.getElementById("mySearch").appendChild(listNode);     
         document.getElementById("myForm").reset(); 
 }

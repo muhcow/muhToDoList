@@ -2,12 +2,11 @@ body {
         background-color: rgb(209, 181, 223);
 }
 
+/*WATCHLIST*/
 h1 {
     text-align: center;
     font-family: "Trebuchet MS";
     position: relative;
-    /*left: 60px;
-    top: 40px;*/
     font-size: 70px; 
     font-style: normal; 
     font-variant: normal; 
@@ -15,21 +14,23 @@ h1 {
     color:#363535;
     }   
 
+    /*Form*/
 #mainForm{
     text-align: center;
 }    
 
+/*STYLE OF SEARCH LIST*/
 .listStyle{
     font-family: "Trebuchet MS";
     color:#363535;
     list-style-type:none;
-    line-height: 30px;
+    line-height: 20px;
     margin-top: -228px;
     margin-bottom: 200px;
     margin-right: 0px;
-    margin-left: 142px;
+    margin-left: 242px;
     box-sizing: border-box;
-    border: 6px solid rgb(160, 160, 160);
+    /*border: 6px solid rgb(160, 160, 160);*/
     border-radius: 20px;
     /*padding-top: 00px;*/
     padding-right: 0px;
@@ -38,6 +39,7 @@ h1 {
 
 }
 
+/*STYLE OF SEARCH LIST*/
 #mySearch {
     position: absolute;
     left: 180px;
@@ -51,52 +53,13 @@ h1 {
     */
 }
 
-
-  .myLike :hover{
-  background-image: url("like.png");
-  background-size: 40px;
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-  position: relative;  
-  cursor: pointer;  
-}
-
-
-
-/*
-#mySearch ::before{
-    content:  url("searchicon.png");
-    display: inline-block;
-    
-    background-image: url("searchicon.png");
-    background-repeat: no-repeat;
-    
-    width: 400px;
-    position: absolute; 
-    left:-150px;
-    top: 0px;
-  }
-  
-
-  #mySearch :hover ::before {
-    background-image: url('like.png');
-    background-size: 40px 40px;
-    background-position: 100px 200px;
-    display: inline-block;
-    background-repeat: no-repeat;
-    width: 70px; 
-    height: 70px;
-    content:"";
-  }
-  */
-  
-
-
+/*LIST STYLES*/
 #myList {
     position: absolute;
     left: 900px;
     top: 200px;
     font-size: 30px; 
+    line-height: 10px;
 }
 
 #myList :hover{
@@ -109,10 +72,10 @@ h1 {
     outline: none;
 }
 
+/*SEARCH BAR*/
 #newInput {
-  position: absolute;
-  left: 400px;
-  top: 150px;
+  position: relative;
+  line-height: 10px;
   width: 400px;
   height: 70px;
   box-sizing: border-box;
@@ -133,6 +96,7 @@ h1 {
     display: none;
 }
 
+/*IMAGE IN SERACH LIST*/
 .imgStyle {
     position:relative;
     left:-20px;
@@ -140,45 +104,33 @@ h1 {
     top: 235px;*/
     border: 5px solid #ddd;
     border-radius: 50px;
-    padding: 0px;
     width: 150px;
+    background-image: url("like.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    cursor: pointer;
     /*vertical-align: top;*/
     /*float:left;*/
   }
 
-  .imgStyle :hover{
-    background-image: url("like.png");
-    background-size: 40px;
-    background-repeat: no-repeat;
-    background-position: -100px 2000px;
-    position: relative;  
-    cursor: pointer;  
-  }
-
-  #heartIcon {
-    position:relative;
-    left:-40px;
-    top: 0px;
-    width: 100px;
-    vertical-align: top;
-    visibility: hidden;
-  }
-
-  /*
+  /*DOESNT WORK*/
   .iconStyle {
     position:relative;
     left:-40px;
     top: 0px;
     width: 35px;
     vertical-align: top;
-  }
-  */
-
-  #heartIcon :hover{
-    width: 50px;
-    left: 0px;
-    visibility: hidden;
+    
+    width: 60px;
+   
   }
   
+  .iconStyle :hover {
+    background-image: url("like.png");
+    background-size: 40px;
+    background-repeat: no-repeat;
+    /*background-position: 5px 5px;*/
+  }
+
   
 
