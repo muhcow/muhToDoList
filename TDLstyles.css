@@ -39,6 +39,13 @@ h1 {
 
 }
 
+.watchList{
+    font-family: "Trebuchet MS";
+    color:#363535;
+    list-style-type:none;
+    line-height: 80px;
+}
+
 /*STYLE OF SEARCH LIST*/
 #mySearch {
     position: absolute;
@@ -55,18 +62,20 @@ h1 {
 
 /*LIST STYLES*/
 #myList {
-    position: absolute;
-    left: 900px;
-    top: 200px;
+    position: relative;
+    left: 300px;
+    top: 70px;
     font-size: 30px; 
     line-height: 10px;
 }
 
+/*
 #myList :hover{
     text-decoration: line-through;
     cursor: pointer;
     
 }
+*/
 
 #myList:focus {
     outline: none;
@@ -132,5 +141,110 @@ h1 {
     /*background-position: 5px 5px;*/
   }
 
+  .wasteBin {
+      position: relative;
+      height: 26px;
+      left: 40px;
+  }
+
+  .wasteBin :hover{
+    cursor: pointer;
+}
+
   
 
+.trash {
+	background:#363535;;
+	width: 16.5px;
+	height: 20px;
+	display: inline-block;
+	margin:0 auto;
+	left:40px;
+	position: relative;
+	-webkit-border-bottom-right-radius: -4px;
+	-webkit-border-bottom-left-radius: -4px;
+	-moz-border-radius-bottomright: 200px;
+	-moz-border-radius-bottomleft: 200px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+
+.trash span {
+	position: absolute;
+    height: 3px;
+    width:16.5px;
+	background: #363535;;
+	top: -5px;
+	left: 0px;
+	right: -10px;
+	
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
+	transform: rotate(0deg);
+	transition: transform 250ms;
+	transform-origin: 19% 100%;
+}
+
+/*
+.trash span:after {
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 4px;
+	background: #363535;;
+    top: -3px;
+    left: 4px;
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	transform: rotate(0deg);
+	transition: transform 250ms;
+	transform-origin: 19% 100%;
+	
+}
+*/
+
+.trash:hover span {
+	transform: rotate(-45deg);
+	transition: transform 250ms;
+}
+
+.trashWrapper{
+    left:70px;
+    display:none;
+}
+
+/*HEART ICONS*/
+.heartIcons{
+    position: relative;
+    /*width: 30px;
+    height: 30px;*/
+    color:#6f6c6c;
+    cursor: pointer;
+    left: -20px;
+    top: 5px;
+    /*display:none;*/
+  }
+
+  .material-icons {
+    font-size: 24px;
+  }
+  
+  #heartBorder-liked{
+    position: relative;
+    /*color:white*/
+    color: rgb(227, 63, 153);
+    left: -41px;
+  }
+  
+  #heartIcon{
+    position: relative;
+    /*top: 26px;*/
+    /*display:none;*/
+    font-size: 33px;
+  }
+
+  .liked{
+    color: rgb(227, 63, 153);
+  }
