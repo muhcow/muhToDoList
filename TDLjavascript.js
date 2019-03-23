@@ -8,59 +8,27 @@ function addItem(newItem){
 
     //make new list element and add text and styles
     var listNode = document.createElement("LI"); 
-    
-    //find heartBorderIcon element and clone it + add css to it
-    var heart = document.getElementById("heartBorder-liked");
-    var heartBorderClone = heart.cloneNode(true);
-    heartBorderClone.classList.add("heartIcons");
+
     //find heartIcon element and clone it + add css to it
-    var heart = document.getElementById("heartIcon");
+    var heart = document.getElementById("heartOriginal");
     var heartClone = heart.cloneNode(true);
+    heartClone.id = "heartIcon";
     heartClone.classList.add("heartIcons");
     var liked = true;
     heartClone.addEventListener("click", function changeColor(event){ 
-        console.log(this.style);
         if(liked){
-            //this.style.opacity = 0;
             this.classList.add("liked");
-            // this.id="not-liked";
             liked = false;
-            console.log("first if");
-            console.log(liked);
           }
           else{
-            //this.style.opacity = 1;
             this.classList.remove("liked");
-            //this.style.position = "relative";
-            //this.id="liked";
             liked = true;
-            console.log("else");
-            console.log(liked);
           }
             });
     
     listNode.appendChild(heartClone);
-    //listNode.appendChild(heartBorderClone);
-    
-    /*
-    //add click event to listNode
-    listNode.addEventListener("click", function changeColor(event){ 
-    if(this.firstElementChild.id!="not-liked"){
-      this.firstElementChild.style.display = "none";
-      this.firstElementChild.id="not-liked";
-    }
-    else{
-      this.firstElementChild.style.display = "block";
-      this.firstElementChild.style.position = "absolute";
-      this.firstElementChild.id="liked";
-    }
-        });
-        */
         
-        
-
   //add to list
-  //document.getElementById("myList").appendChild(listNode);
 
     //add anime title
     var newNode = document.createTextNode(newItem.data);
@@ -71,20 +39,19 @@ function addItem(newItem){
     var trashClone = trash.cloneNode(true);
     //add on click event
     trashClone.addEventListener("click", function deleteItem(event){
+        console.log("yeee");
         var list = document.getElementById("myList");
         list.removeChild(this.parentElement);
     });
     //add hover event (not working r n)
     trashClone.addEventListener("mouseover", function addCss(event){
+        console.log(this.parentElement.childNodes[1]);
         this.style.cursor = "pointer"; 
-        console.log(this.parentElement);
-        this.parentElement.style.textDecoraton =  "line-through";
+        this.parentElement.childNodes[1].style.textDecoraton =  "line-through";
+        console.log(this.parentElement.childNodes[1].style.textDecoraton);
     });
-    listNode.appendChild(trashClone); 
-    
+    listNode.appendChild(trashClone);     
     listNode.classList.add("watchList");
-
-  
 
     //add element to main list
     document.getElementById("myList").appendChild(listNode);
